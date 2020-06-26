@@ -5,7 +5,7 @@ const campG = [
         name: 'Pacfic City',
         location: 'Cloverdale, OR',
         hookups: true
-
+        
     },
 
 
@@ -30,7 +30,7 @@ const campG = [
         id: 4,
         name: 'Russian River',
         location: 'Cloverdale, CA',
-        hookups: true
+        hookups: false
         
     },
 
