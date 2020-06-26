@@ -1,23 +1,23 @@
-const campG = [],
-let id = 1;
+// const campG = [],
+// let id = 1;
 
-module.exports {
+// module.exports {
 
-    getCampG:(req, res) => {
-        res.status(200).send(caughtPokemon);
-    };
+//     getCampG:(req, res) => {
+//         res.status(200).send(caughtPokemon);
+//     };
 
 
-    reviewCampG:(req, res) => {
-        res.status(200).send(caughtPokemon);
-    };
+//     reviewCampG:(req, res) => {
+//         res.status(200).send(caughtPokemon);
+//     };
 
-    editCampG:(req, res) => {
-        res.status(200).send(caughtPokemon);                
-    };
+//     editCampG:(req, res) => {
+//         res.status(200).send(caughtPokemon);                
+//     };
 
-    deleteCampG:(req, res) => {
-        res.status(200).send(caughtPokemon);
-    }
+//     deleteCampG:(req, res) => {
+//         res.status(200).send(caughtPokemon);
+//     }
 
-}
+// }
