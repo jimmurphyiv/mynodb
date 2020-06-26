@@ -1,5 +1,5 @@
 module.exports{
-    getCampgrounds: {req, res} => {
-        
+    getCampGround: {req, res} => {
+
     }
 }
