@@ -6,19 +6,19 @@ import { render } from '@testing-library/react';
 class Field extends Component{
     constructor(props){
         super(props);
-        this.state{
-            some: []
-        }
+        // this.state{
+        //     some: []
+        // }
     }
 }
 
-render(){
-    return(
-        <div>
+// render(){
+//     return(
+//         <div>
 
-        </div>
+//         </div>
 
-    )
-}
+//     )
+// }
 
 export default Field;
