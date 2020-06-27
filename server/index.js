@@ -9,9 +9,10 @@ app.use(express.json());
 
 
 app.get('/api/campG', woodsCtrl.getCampG);
-// app.post('/api/campG', truckCtrl.reviewCampG);
-// app.put('/api/campG', truckCtrl.editCampG);
-// app.delete('/api/campG', truckCtrl.deleteCampG);
+app.get('/api/campG/:id', woodsCtrl.getOneCampG);
+app.post('/api/campG', woodsCtrl.addCampG);
+app.put('/api/campG/:id', woodsCtrl.updateReview);
+app.delete('/api/campG/:id', woodsCtrl.deleteCampG);
 
 
 

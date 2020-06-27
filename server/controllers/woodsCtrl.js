@@ -117,6 +117,42 @@ module.exports = {
 
     getCampG: (req, res) => {
         res.status(200).send(campG);
+    },
+
+    getOneCampG: (req, res) => {
+        let cGround = campG.find(e => e.id === +req.params.id)
+        res.status(200).send(cGround);
+    },
+
+    addCampG: (req, res) => {
+        let newCampG = {
+            id: id,
+            name: req.body.name,
+            location: req.body.location,
+            review: req.body.review
+         
+        }
+        id++
+        campG.push(newCampG);
+        res.status(200).send(campG);
+
+    },
+
+    updateReview: (req, res) => {
+        let index = campG.findIndex(e => e.id === +req.params.id);
+        campG[index].review = req.body.review;
+        res.status(200).send(campG);
+
+    },
+
+    deleteCampG: (req, res) => {
+        let index = campG.findIndex(e => e.id === +req.params.id);
+        if(index !== -1){
+            campG.splice(index, 1);
+        }
+        res.status(200).send(campG);
+
     }
+
 
 }
