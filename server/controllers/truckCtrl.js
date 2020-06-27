@@ -1,23 +1,23 @@
 // const campG = [],
-// let id = 1;
+// // let id = 1;
 
-// module.exports {
+// module.exports  = {
 
 //     getCampG:(req, res) => {
-//         res.status(200).send(caughtPokemon);
-//     };
-
-
-//     reviewCampG:(req, res) => {
-//         res.status(200).send(caughtPokemon);
-//     };
-
-//     editCampG:(req, res) => {
-//         res.status(200).send(caughtPokemon);                
-//     };
-
-//     deleteCampG:(req, res) => {
-//         res.status(200).send(caughtPokemon);
+//         res.status(200).send(campG);
 //     }
+
+
+    // reviewCampG:(req, res) => {
+    //     res.status(200).send(campG);
+    // };
+
+    // editCampG:(req, res) => {
+    //     res.status(200).send(campG);                
+    // };
+
+    // deleteCampG:(req, res) => {
+    //     res.status(200).send(campG);
+    // }
 
 // }

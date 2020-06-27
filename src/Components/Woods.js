@@ -1,17 +1,17 @@
-import React, {Componet} from 'react';
+// import React, {Componet} from 'react';
 
 
-class Woods extends Componet {
+// class Woods extends Componet {
 
-}
+// }
 
-render(){
-    return(
-        <div>
+// render(){
+//     return(
+//         <div>
+//             I'm in the woods
 
+//         </div>
+//     )
+// }
 
-        </div>
-    )
-}
-
-export default Woods;
+// export default Woods;

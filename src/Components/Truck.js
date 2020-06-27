@@ -1,28 +1,28 @@
-import React, { Component } from "react";
-import { render } from "@testing-library/react";
+// import React, { Component } from "react";
+// import { render } from "@testing-library/react";
 
-class Truck extends Component {
-    constructor(props){
-        super(props);
-        this.state = {
-            isEditing: false,
-            reviewInput: ''
+// class Truck extends Component {
+//     constructor(props){
+//         super(props);
+//         this.state = {
+//             isEditing: false,
+//             reviewInput: ''
 
-        }   
-    }
-}
+//         }   
+//     }
+// }
 
-handleInput = (val) => {
-    this.ListeningStateChangedEvent({reviewInput: val})
-}
+// handleInput = (val) => {
+//     this.ListeningStateChangedEvent({reviewInput: val})
+// }
 
 
-render(){
-    return(
-        <div>
+// render(){
+//     return(
+//         <div>
 
-        </div>
-    )
-}
+//         </div>
+//     )
+// }
 
-export default Truck;
+// export default Truck;
