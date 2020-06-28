@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import Header from './Components/Header';
 import Field from './Components/Field';
 import Camper from './Components/Camper'
-// import axois from 'axios';
+import axois from 'axios';
 import './App.css';
 
 class App extends Component {
@@ -11,13 +11,16 @@ class App extends Component {
      this.state = {
        campG: []
     }
-
-
- 
   }
 
-
-
+  componentDidMount(){
+    axois.get('/api/campG')
+    .then(res => {
+      this.setState({campG: res.data})
+    })
+    .catch(error => console.log(error));
+  
+  }
   render(){
   return (
     <div className="App">

@@ -90,7 +90,7 @@ const campG = [
         name: 'Indian Lakes',
         location: 'Batesville, IN',
         review: 'Located just outside Cincinnati and Indianapolis, Indian Lakes RV Camping Resort is the place to be for year-round vacationing. We offer an attractive selection of rental accommodations for all of our guests including rustic cabins fully-equipped with kitchens and baths. Available for rent is our lakeside lodge, pavilion, and gazebos, which are popular for weddings, reunions, and picnics.',
-        img: 'jpeg'
+        img: 'Batesville,IN.jpeg'
     },
 
 
