@@ -21,6 +21,15 @@ class App extends Component {
     .catch(error => console.log(error));
   
   }
+
+  addCampG = () => { 
+    axois.post('./api/campG')
+    .then(res => {
+        this.setState({campG: this.req.body})
+        })
+    .catch(err => console.log(err))
+      }
+
   render(){
   return (
     <div className="App">
