@@ -9,24 +9,32 @@ class App extends Component {
   constructor(props){
     super(props);
      this.state = {
-       campG: []
+       addCampG: []
     }
+    this.addCampG = this.addCampG.bind(this);
   }
 
-  componentDidMount(){
-    axois.get('/api/campG')
+ 
+
+  addCampG(campG){ 
+    axois.post('./api/campG', {campG})
     .then(res => {
-      this.setState({campG: res.data})
-    })
-    .catch(error => console.log(error));
-  
-  }
+        this.setState({addCampG: this.req.body})
+        })
+    .catch(err => console.log(err))
+    }
+    
+
+
+
   render(){
   return (
     <div className="App">
       <Header />
-      <Field />
-      <Camper />
+      <Field
+          addCampGFn={this.addCampG} />
+      <Camper 
+          addCampG={this.state.addCampG}/>
     <h2>You can do it!</h2>
        
     </div>

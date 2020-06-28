@@ -5,15 +5,16 @@ class Truck extends Component {
     constructor(props){
         super(props);
         this.state = {
-            isEditing: false,
+            udateReview: false,
             reviewInput: ''
 
         }   
     }
 
 
-handleInput = (val) => {
-    this.ListeningStateChangedEvent({reviewInput: val})
+reviewInput = (val) => {
+    this.setState({reviewInput: val});
+    
 }
 
 
