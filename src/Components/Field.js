@@ -8,14 +8,20 @@ class Field extends Component{
     constructor(props){
         super(props);
         this.state = {
-            some: []
+            campG: []
         }
+    }
+
+    componentDidMount(){
+
     }
 
 
 render(){
     return(
         <div>
+           
+            <h2>Field Of Dreams</h2>
             <Woods />
         </div>
 

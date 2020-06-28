@@ -148,7 +148,7 @@ module.exports = {
     deleteCampG: (req, res) => {
         let index = campG.findIndex(e => e.id === +req.params.id);
         if(index !== -1){
-            campG.splice(index, 1);
+            cmapG.splice(index, 1);
         }
         res.status(200).send(campG);
 

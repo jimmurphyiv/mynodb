@@ -20,7 +20,7 @@ handleInput = (val) => {
 render(){
     return(
         <div>
-            
+            <h3>Mudder Trucker</h3>
         </div>
     )
 }
