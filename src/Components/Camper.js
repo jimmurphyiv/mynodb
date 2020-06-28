@@ -1,20 +1,19 @@
-// import React, { Component } from 'react';
-// import Truck from './Truck'
+import React from 'react';
+import Truck from './Truck'
 
 
-// class Camper extends Component {
-//     constructor(props){
-//         super(props);
 
-//     }
-// }
+const Camper = props => {
 
 
-// return (
-//     <div className='Camper'>
-//         <Truck />
-//         <h1>Camper Man</h1>
-//     </div>
-// )
 
-// export default Camper;
+
+
+return (
+    <div className='Camper'>
+        <Truck />
+        <h1>Camper Man</h1>
+    </div>
+)
+}
+export default Camper;

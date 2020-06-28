@@ -1,6 +1,5 @@
 const express = require('express');
 
-// const dataCtrl = require('./controllers/dataCtrl');
 const woodsCtrl = require('./controllers/woodsCtrl');
 // const truckCtrl = require('./controller/truckCtrl');
 const app = express();
