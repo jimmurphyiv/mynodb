@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
-//import axios from 'axios';
 import Woods from './Woods';
+import axios from 'axios';
 
 
 
@@ -15,6 +15,16 @@ class Field extends Component{
     componentDidMount(){
 
     }
+
+    getCampG = () => { 
+        axios.get('./api/campG')
+        .then(res => {
+            this.setState({campG: res.data})
+        })
+        .catch(err => console.log(err))
+
+    }
+
 
 
 render(){
