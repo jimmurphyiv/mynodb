@@ -13,13 +13,14 @@ class Field extends Component{
     }
 
     componentDidMount(){
-
+        this.getOneCampG();
     }
 
-    getCampG = () => { 
+    getOneCampG = () => { 
         axios.get('./api/campG')
         .then(res => {
             this.setState({campG: res.data})
+            console.log()
         })
         .catch(err => console.log(err))
 
@@ -28,11 +29,16 @@ class Field extends Component{
 
 
 render(){
+    const mappedCampG = this.state.campG.map((campG, i) => (
+        <Woods
+            key={i} 
+            campG={campG}/>
+    ))
     return(
-        <div>
-           
+        <div className='cg-flex'>
+           {mappedCampG}
             <h2>Field Of Dreams</h2>
-            <Woods />
+           
         </div>
 
     )

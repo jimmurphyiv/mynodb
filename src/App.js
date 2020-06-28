@@ -21,9 +21,9 @@ class App extends Component {
   render(){
   return (
     <div className="App">
-    <Header />
-    <Field />
-    <Camper />
+      <Header />
+      <Field />
+      <Camper />
     <h2>You can do it!</h2>
        
     </div>

@@ -5,11 +5,12 @@ class Woods extends Component {
 
 
 
+
 render(){
     return(
         <div>
-            I'm in the woods
-
+            <Woods/>
+            <h1>Woods</h1>
         </div>
     )
 }
