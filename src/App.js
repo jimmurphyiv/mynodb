@@ -19,6 +19,7 @@ class App extends Component {
   addCampG(campG){ 
     axois.post('./api/campG', {campG})
     .then(res => {
+<<<<<<< HEAD
         this.setState({addCampG: this.req.body})
         })
     .catch(err => console.log(err))
@@ -26,6 +27,21 @@ class App extends Component {
     
 
 
+=======
+      this.setState({campG: res.data})
+    })
+    .catch(error => console.log(error));
+  
+  }
+
+  addCampG = () => { 
+    axois.post('./api/campG')
+    .then(res => {
+        this.setState({campG: this.req.body})
+        })
+    .catch(err => console.log(err))
+      }
+>>>>>>> d81e644699bef1232a9e70826691a1aaedc1e6eb
 
   render(){
   return (
