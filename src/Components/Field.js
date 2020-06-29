@@ -22,9 +22,6 @@ render(){
     return(
         <div className='all-camp'>
            {mappedCampG}
-
-            {/* { <div>{this.state.oneCampG && this.state.oneCampG.name}</div>} */}
-           
         </div>
 
     )

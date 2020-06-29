@@ -33,7 +33,7 @@ handleChange = (value) => {
 render(){
     return(
         
-        <div>
+        <div className='buttons'>
             
             <img src={this.props.oneCampG.img} alt={this.props.oneCampG.name} />
             {this.state.updateReview ?(
@@ -45,7 +45,7 @@ render(){
                 <button onClick={() => this.handleUpdate(this.props.oneCampG.id)}>Submit</button>
             </div> ) : (
 
-                <div>
+                <div className='buttons'>
                     <p>{this.props.oneCampG.review}</p>
                     <button onClick={this.reviewToggle}>Edit Review</button>
                 </div>    

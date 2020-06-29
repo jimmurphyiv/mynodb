@@ -6,7 +6,7 @@ import Truck from './Truck'
 const Camper = props => {
   
     return (
-        <div>
+        <div className="camper">
             <h1>Camper Review </h1>
                 <div className='all-camp'>
             <Truck

@@ -76,7 +76,7 @@ class App extends Component {
   return (
     <div className="App">
       <Header />
-      <Form addCampG={this.addCampG}/>
+    
       <Field
           getOneCampG={this.getOneCampG}
           campG={this.state.campG}
@@ -86,7 +86,7 @@ class App extends Component {
           
           updateReviewFn={this.updateReview}
           deleteCampG={this.deleteCampG}/>
-    <h2>You can do it!</h2>
+         <Form addCampG={this.addCampG}/>
        
     </div>
     );
