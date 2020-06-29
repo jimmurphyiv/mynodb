@@ -13,15 +13,20 @@ class Field extends Component{
     }
 
     componentDidMount(){
+        axios.get(`/api/campG`)
+        .then(res => {
+            this.setState({campG: res.data})
+            })
+        .catch(err => console.log(err))
         this.getOneCampG();
     }
 
  
 
-    getOneCampG = () => { 
-        axios.get('/api/campG')
+    getOneCampG = (id) => { 
+        axios.get(`/api/campG/${id}`)
         .then(res => {
-            this.setState({campG: res.data})
+            this.setState({oneCampG: res.data})
             })
         .catch(err => console.log(err))
 
@@ -43,6 +48,7 @@ render(){
         <div className='all-camp'>
            {mappedCampG}
            
+            <div>{this.state.oneCampG && this.state.oneCampG.name}</div>    
            
         </div>
 

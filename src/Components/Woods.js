@@ -7,12 +7,14 @@ class Woods extends Component {
         const {campG} = this.props;
         
         let newCampG = {
+
             name: campG.name,
             location: campG.location,
             review: campG.review,
             img: campG.img            
         }
-        this.props.getOneCampGFn(newCampG);
+        this.props.getOneCampGFn(campG.id);
+        this.props.oneCampG(newCampG);
     }
 
 

@@ -4,10 +4,10 @@ import Truck from './Truck'
 
 
 const Camper = props => {
-    const mappedCampG = props.addCampG.map((campG, i) => (
+    const mappedCampG = props.addCampG.map((oneCampG, i) => (
         <Truck
             key={i}
-            campG={campG} 
+            oneCampG={oneCampG} 
             updateReviewFn={props.updateReviewFn}
             deleteCampG={this.deleteCampG} />
 

@@ -29,17 +29,17 @@ handleUpdate = (id) => {
 render(){
     return(
         <div>
-            <img src={this.props.campG.img} alt={this.props.campG.name} />
-            {this.state.udateReview}
+            <img src={this.props.oneCampG.img} alt={this.props.oneCampG.name} />
+            {this.state.updateReview}
        
       <div>
             <input value={this.state.reviewInput}
                     onChange={e => this.handleUpdate(e.target.value)} />
 
-            <button onClick={() => this.handleUpdate(this.props.campG.id)}>Submit</button>
+            <button onClick={() => this.handleUpdate(this.props.oneCampG.id)}>Submit</button>
         </div>
 
-            <p>{this.props.campG.review}</p>
+            <p>{this.props.oneCampG.review}</p>
             <buton onClick={this.reviewToggle}>Edit Review</buton>
 
         </div>

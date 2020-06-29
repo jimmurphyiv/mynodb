@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    axios.get('http://localhost:4545/api/campG')
+    axios.get('/api/campG')
     .then( res => {
       this.setState({getOneCampG: res.data})
     })
@@ -26,7 +26,7 @@ class App extends Component {
  
 
   addCampG(campG){ 
-    axios.post('/api/campG', {campG})
+    axios.post('http://localhost:4545/api/campG', {campG})
     .then(res => {
         this.setState({addCampG: res.data })
         })
@@ -36,7 +36,7 @@ class App extends Component {
     updateReview = (id, newReview) => {
       let body = {review: newReview}
 
-      axios.put(`/api/campG/${id}`, {body})
+      axios.put(`http://localhost:4545/api/campG/${id}`, {body})
       .then(res =>{
         this.setState({newReview: res.data})
       })
@@ -44,7 +44,7 @@ class App extends Component {
     }
 
     deleteCampG = (id) => {
-      axios.delete(`/api/campG/${id}`)
+      axios.delete(`http://localhost:4545/api/campG/${id}`)
       .then(res => {
         this.setState({campG: res.data})
       })
@@ -62,6 +62,7 @@ class App extends Component {
       <Field
           addCampGFn={this.addCampG} />
       <Camper 
+          oneCampG={this.state.oneCampG}
           addCampG={this.state.addCampG}
           updateReviewFn={this.updateReview}
           deleteCampG={this.deleteCampG}/>
