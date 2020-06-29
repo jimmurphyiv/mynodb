@@ -14,7 +14,7 @@ class Woods extends Component {
             img: campG.img            
         }
         this.props.getOneCampGFn(campG.id);
-        this.props.oneCampG(newCampG);
+        
     }
 
 

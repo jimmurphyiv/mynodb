@@ -28,7 +28,9 @@ handleUpdate = (id) => {
 
 render(){
     return(
+        
         <div>
+            
             <img src={this.props.oneCampG.img} alt={this.props.oneCampG.name} />
             {this.state.updateReview}
        
@@ -40,7 +42,7 @@ render(){
         </div>
 
             <p>{this.props.oneCampG.review}</p>
-            <buton onClick={this.reviewToggle}>Edit Review</buton>
+            <button onClick={this.reviewToggle}>Edit Review</button>
 
         </div>
 

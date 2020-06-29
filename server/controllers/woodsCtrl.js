@@ -6,7 +6,7 @@ const campG = [
         name: 'Pacific City',
         location: 'Cloverdale, OR',
         review: 'You will never tire of the spectacular ocean views with a trip to Pacific City RV Camping in Oregon. Nature trails, fishing, clamming, surfing, beachcombing and more can all be found at this RV campground in Oregon, located along the beautiful Central Oregon coastline.',
-        img: 'jpeg'
+        img: '../../public/Assets/pac.jpeg'
 
     },
 

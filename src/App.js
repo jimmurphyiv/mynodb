@@ -10,17 +10,29 @@ class App extends Component {
   constructor(props){
     super(props);
      this.state = {
-       addCampG: []
+       campG: [],
+       oneCampG: {}
     }
     this.addCampG = this.addCampG.bind(this);
   }
 
   componentDidMount(){
-    axios.get('/api/campG')
-    .then( res => {
-      this.setState({getOneCampG: res.data})
-    })
-  }
+    axios.get(`/api/campG`)
+    .then(res => {
+        this.setState({campG: res.data})
+        })
+    .catch(err => console.log(err))
+    this.getOneCampG();
+}
+
+
+  getOneCampG = (id) => { 
+    axios.get(`/api/campG/${id}`)
+    .then(res => {
+        this.setState({oneCampG: res.data})
+        })
+    .catch(err => console.log(err))
+      }
 
   
  
@@ -60,6 +72,8 @@ class App extends Component {
     <div className="App">
       <Header />
       <Field
+          getOneCampG={this.getOneCampG}
+          campG={this.state.campG}
           addCampGFn={this.addCampG} />
       <Camper 
           oneCampG={this.state.oneCampG}
