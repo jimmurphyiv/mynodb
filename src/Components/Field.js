@@ -12,6 +12,10 @@ class Field extends Component{
         }
     }
 
+    componentDidMount(){
+        this.getOneCampG();
+    }
+
  
 
     getOneCampG = () => { 

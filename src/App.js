@@ -2,9 +2,9 @@ import React, {Component} from 'react';
 import Header from './Components/Header';
 import Field from './Components/Field';
 import Camper from './Components/Camper'
-import axois from 'axios';
-import './App.css';
 import axios from 'axios';
+import './App.css';
+
 
 class App extends Component {
   constructor(props){
@@ -22,10 +22,11 @@ class App extends Component {
     })
   }
 
+  
  
 
   addCampG(campG){ 
-    axois.post('./api/campG', {campG})
+    axios.post('./api/campG', {campG})
     .then(res => {
         this.setState({addCampG: res.data })
         })
@@ -43,7 +44,7 @@ class App extends Component {
     }
 
     deleteCampG = (id) => {
-      axois.delete(`/api/campG/${id}`)
+      axios.delete(`/api/campG/${id}`)
       .then(res => {
         this.setState({campG: res.data})
       })
