@@ -12,11 +12,9 @@ class Field extends Component{
         }
     }
 
-    componentDidMount(){
-        this.getCampG();
-    }
+ 
 
-    getCampG = () => { 
+    getOneCampG = () => { 
         axios.get('./api/campG')
         .then(res => {
             this.setState({campG: res.data})
@@ -27,6 +25,9 @@ class Field extends Component{
 
 
 
+    
+
+
 render(){
     const mappedCampG = this.state.campG.map((campG, i) => (
         <Woods
@@ -34,9 +35,9 @@ render(){
             campG={campG}/>
     ))
     return(
-        <div className="all-camp">
+        <div className='all-camp'>
            {mappedCampG}
-            
+           
            
         </div>
 

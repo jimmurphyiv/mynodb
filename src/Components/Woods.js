@@ -3,7 +3,7 @@ import React, {Component} from 'react';
 
 class Woods extends Component {
     
-    addOneCampG = () => {
+    addCampG = () => {
         const {campG} = this.props;
         
         let newCampG = {

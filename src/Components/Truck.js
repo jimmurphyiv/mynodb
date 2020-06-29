@@ -14,14 +14,27 @@ class Truck extends Component {
 
 reviewInput = (val) => {
     this.setState({reviewInput: val});
-    
+
 }
+
+reviewToggle = () => {
+    this.setState({updateReview: !this.state.updateReview})
+}
+
+handleUpdate = (id) => {
+    this.props.updateReviewFn(id, this.state.reviewInput);
+    this.reviewToggle();
+}
+
+
+
 
 
 render(){
     return(
         <div>
-            <h3>Mudder Trucker</h3>
+            <img src={this.props.campG.img} alt={this.props.campG.name} />
+
         </div>
     )
 }

@@ -7,7 +7,9 @@ const Camper = props => {
     const mappedCampG = props.addCampG.map((campG, i) => (
         <Truck
             key={i}
-            addCampG={campG} />
+            campG={campG} 
+            updateReviewFn={props.updateReviewFn}
+            deleteCampG={this.deleteCampG} />
 
 
 
@@ -17,7 +19,7 @@ const Camper = props => {
 return (
         <div>
             <h1>Camper Review </h1>
-                <div className='Camper'>
+                <div className='all-camp'>
                 {mappedCampG}
                 </div>
         </div>
