@@ -34,11 +34,7 @@ render(){
             campG={campG}/>
     ))
     return(
-<<<<<<< HEAD
         <div className="all-camp">
-=======
-        <div className='campGrounds'>
->>>>>>> d81e644699bef1232a9e70826691a1aaedc1e6eb
            {mappedCampG}
             
            
