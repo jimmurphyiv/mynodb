@@ -6,7 +6,7 @@ const campG = [
         name: 'Pacific City',
         location: 'Cloverdale, OR',
         review: 'You will never tire of the spectacular ocean views with a trip to Pacific City RV Camping in Oregon. Nature trails, fishing, clamming, surfing, beachcombing and more can all be found at this RV campground in Oregon, located along the beautiful Central Oregon coastline.',
-        img: '../../public/Assets/pac.jpeg'
+        img: 'https://visittheoregoncoast.com/content/uploads/2015/07/Pacific-City-by-Larry-Andreasen.jpg'
 
     },
 
@@ -16,7 +16,7 @@ const campG = [
         name: 'Whalers Rest',
         location: 'Newport, OR',
         review: 'Grab your bathing suits, towels and flip flops! Whalers Rest RV Camping offers a pristine beach location just 150 yards from the Pacific Ocean. Open year-round, this RV campground on the Oregon coast offers beach goers activities including salt-water swimming, scuba diving, surfing, whale watching and fishing all within minutes Whalers Rest RV Camping.',
-        img: 'jpeg'
+        img: 'https://media.gettyimages.com/photos/aerial-view-of-yaquina-bay-bridge-and-newport-oregon-picture-id996517284?s=612x612'
 
     },
     {    
@@ -130,8 +130,8 @@ module.exports = {
             id: id,
             name: req.body.name,
             location: req.body.location,
-            review: req.body.review
-         
+            review: req.body.review,
+            img: req.body.img
         }
         id++
         campG.push(newCampG);
@@ -141,7 +141,9 @@ module.exports = {
 
     updateReview: (req, res) => {
         let index = campG.findIndex(e => e.id === +req.params.id);
+        
         campG[index].review = req.body.review;
+        console.log(campG[index])
         res.status(200).send(campG);
 
     },

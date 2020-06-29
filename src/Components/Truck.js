@@ -26,6 +26,10 @@ handleUpdate = (id) => {
     this.reviewToggle();
 }
 
+handleChange = (value) => {
+    this.setState({reviewInput: value});
+}
+
 render(){
     return(
         
@@ -36,7 +40,7 @@ render(){
        
             <div>
                 <input value={this.state.reviewInput}
-                        onChange={e => this.handleUpdate(e.target.value)} />
+                        onChange={e => this.handleChange(e.target.value)} />
 
                 <button onClick={() => this.handleUpdate(this.props.oneCampG.id)}>Submit</button>
             </div> ) : (
@@ -46,7 +50,7 @@ render(){
                     <button onClick={this.reviewToggle}>Edit Review</button>
                 </div>    
             )}
-            <button onClick={this.props.deleteCampG(this.props.oneCampG.id)}>Delete</button>       
+            <button onClick={ () => this.props.deleteCampG(this.props.oneCampG.id)}>Delete</button>       
         </div>
 
         )

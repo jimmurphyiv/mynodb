@@ -6,13 +6,7 @@ class Woods extends Component {
     addCampG = () => {
         const {campG} = this.props;
         
-        let newCampG = {
-
-            name: campG.name,
-            location: campG.location,
-            review: campG.review,
-            img: campG.img            
-        }
+      
         this.props.getOneCampGFn(campG.id);
         
     }
@@ -23,10 +17,10 @@ class Woods extends Component {
 render(){
     return(
       
-            <div onClick={this.addCampG}>
-                <p>{this.newCampG}</p>
+            <div onClick={this.addCampG} >
+                <p>{this.props.campG.name}</p>
                 <img src={this.props.campG.img} 
-                alt={this.props.campG.name} />
+                alt={this.props.campG.name} style={{width: 125}}/>
                 
             
             </div>
