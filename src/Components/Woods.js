@@ -12,7 +12,7 @@ class Woods extends Component {
             review: campG.review,
             img: campG.img            
         }
-        this.props.addCampG(newCampG);
+        this.props.getOneCampGFn(newCampG);
     }
 
 
@@ -24,7 +24,7 @@ render(){
             <div onClick={this.addCampG}>
           
                 <img src={this.props.campG.img} 
-                alt={this.props.campG.location} />
+                alt={this.props.campG.name} />
                 
             
             </div>

@@ -36,7 +36,8 @@ render(){
     const mappedCampG = this.state.campG.map((campG, i) => (
         <Woods
             key={i} 
-            campG={campG}/>
+            campG={campG}
+            getOneCampGFn={this.getOneCampG}/>
     ))
     return(
         <div className='all-camp'>
