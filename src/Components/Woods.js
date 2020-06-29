@@ -22,7 +22,7 @@ render(){
     return(
       
             <div onClick={this.addCampG}>
-          
+                <p>{this.newCampG}</p>
                 <img src={this.props.campG.img} 
                 alt={this.props.campG.name} />
                 

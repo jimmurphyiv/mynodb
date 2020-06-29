@@ -16,7 +16,7 @@ class App extends Component {
   }
 
   componentDidMount(){
-    axios.get('/api/campG')
+    axios.get('http://localhost:4545/api/campG')
     .then( res => {
       this.setState({getOneCampG: res.data})
     })
@@ -26,7 +26,7 @@ class App extends Component {
  
 
   addCampG(campG){ 
-    axios.post('./api/campG', {campG})
+    axios.post('/api/campG', {campG})
     .then(res => {
         this.setState({addCampG: res.data })
         })

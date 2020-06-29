@@ -19,7 +19,7 @@ class Field extends Component{
  
 
     getOneCampG = () => { 
-        axios.get('./api/campG')
+        axios.get('/api/campG')
         .then(res => {
             this.setState({campG: res.data})
             })

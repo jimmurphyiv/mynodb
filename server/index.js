@@ -1,11 +1,11 @@
 const express = require('express');
-
+const cors = require('cors');
 const woodsCtrl = require('./controllers/woodsCtrl');
 // const truckCtrl = require('./controller/truckCtrl');
 const app = express();
 
 app.use(express.json());
-
+app.use(cors());
 
 app.get('/api/campG', woodsCtrl.getCampG);
 app.get('/api/campG/:id', woodsCtrl.getOneCampG);

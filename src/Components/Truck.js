@@ -26,10 +26,6 @@ handleUpdate = (id) => {
     this.reviewToggle();
 }
 
-
-
-
-
 render(){
     return(
         <div>
@@ -39,11 +35,15 @@ render(){
       <div>
             <input value={this.state.reviewInput}
                     onChange={e => this.handleUpdate(e.target.value)} />
+
             <button onClick={() => this.handleUpdate(this.props.campG.id)}>Submit</button>
         </div>
+
             <p>{this.props.campG.review}</p>
             <buton onClick={this.reviewToggle}>Edit Review</buton>
+
         </div>
+
         )
     }
 }
